@@ -1,0 +1,112 @@
+import random,string
+
+def f1():
+    if l1i == 'v':
+        l1 = random.choice(vowel)
+    elif l1i == 'c':
+        l1 = random.choice(consonant)
+    elif l1i == 'l':
+        l1 = random.choice(letter)
+    else:
+        l1 = l1i
+    if l2i == 'v':
+        l2 = random.choice(vowel)
+    elif l2i == 'c':
+        l2 = random.choice(consonant)
+    elif l2i == 'l':
+        l2 = random.choice(letter)
+    else:
+        l2 = l2i
+    if l3i == 'v':
+        l3 = random.choice(vowel)
+    elif l3i == 'c':
+        l3 = random.choice(consonant)
+    elif l3i == 'l':
+        l3 = random.choice(letter)
+    else:
+        l3 = l3i
+    if l4i == 'v':
+        l4 = random.choice(vowel)
+    elif l4i == 'c':
+        l4 = random.choice(consonant)
+    elif l4i == 'l':
+        l4 = random.choice(letter)
+    else:
+        l4 = l4i
+    if l5i == 'v':
+        l5 = random.choice(vowel)
+    elif l5i == 'c':
+        l5 = random.choice(consonant)
+    elif l5i == 'l':
+        l5 = random.choice(letter)
+    else:
+        l5 = l5i
+    name=l1+l2+l3+l4+l5
+    return(name)
+def name():
+    num=int(input('enter the no.of chars you want'))
+    l1=random.choice(string.ascii_lowercase)
+    l2=random.choice(string.ascii_lowercase)
+    l3=random.choice(string.ascii_lowercase)
+    l4=random.choice(string.ascii_lowercase)
+    l5 = random.choice(string.ascii_lowercase)
+    if num==1:
+        s=l1
+    elif num==2:
+        s=l1+l2
+    elif num == 3:
+        s=l1 + l2+l3
+    elif num == 4:
+        s=l1 + l2+l3+l4
+    else:
+        s=l1+l2+l3+l4+l5
+    return(s)
+print(name())
+
+cond1=input('are you okay with suggestion yes/no:\t')
+if cond1=='no':
+    req=int(input('enter the no.of chars for the name'))
+    if req==1:
+        print('please enter the characters')
+        l1i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+    elif req==2:
+        print('please enter the characters')
+        l1i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+        l2i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+    elif req == 3:
+        print('please enter the characters')
+        l1i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+        l2i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+        l3i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+    elif req == 4:
+        l1i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+        l2i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+        l3i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+        l4i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+    elif req ==5:
+        l1i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+        l2i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+        l3i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+        l4i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+        l5i = input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+        
+    print('please enter the characters')
+    l1i=input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+    l2i=input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+    l3i=input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+    l4i=input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+    l5i=input('for vowel enter "v" for consonant enter "c" for others enter "l" for others enter alphabet:\t')
+else:
+    print('tq')
+vowel='aeiou'
+consonant='bcdfghjklmnpqrstvwxyz'
+letter=string.ascii_lowercase
+print(f1())
+print('Need more suggested names?')
+q=input("yes or No : \t\t")
+if q=='yes':
+    n=int(input("enter noof usggestions"))
+    for i in range(n+1):
+        print(f1())
+else:
+    print('Thank you for using our service')
